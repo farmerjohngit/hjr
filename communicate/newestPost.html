@@ -1,0 +1,14 @@
+<table data-ng-table="newestPost" class="thePostList">
+    <tr>
+        <th>时间</th>
+        <th>标题</th>
+        <th>所属贴吧</th>
+        <th>发帖人</th>
+    </tr>
+    <tr data-ng-repeat="_v in postList" data-ng-click="postDetail($index)">
+        <td>{{_v.timetrans}}</td>
+        <td>{{_v.postname}}</td>
+        <td>{{_v.postcategory}}</td>
+        <td>{{_v.name}}</td>
+    </tr>
+</table>

@@ -1,0 +1,199 @@
+<?php
+	session_start();
+	echo "<input type=hidden class=teachernum value=".@$_SESSION['account']." />";
+?>
+<!DOCTYPE html>
+<html data-ng-app="tUserCenter">
+<head  lang="zh-CN">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="css/tusercenter.css" />
+	<link type="text/css" rel="stylesheet" href="css/common.css" />
+	<title>个人中心</title>
+	<script src="js/angular.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/tusercenter.js"></script>
+</head>
+<body data-ng-controller="tUserCenterController">
+	<header><!--公用首部-->
+		<div class="bg0">
+			<nav class="topInfor">
+				<ul class="outsideLink">
+					<li><a href="index.php">网站首页</a></li>
+					<li><a href="http://jwc.csuft.edu.cn/" target="_blank">教务处系统</a></li>
+					<li><a href="http://www.csuft.edu.cn/" target="_blank">中南林业科技大学</a></li>
+				</ul>
+				<ul class="userLink">
+					<li><a href=""><span class="download">下载客户端</span></a></li>
+					<li>欢迎来到HJR--ONLINE！
+					<?php
+						require('php/conn.php');
+						@$check = $_SESSION['account'];
+						if ($check) {
+							if (substr($check,0,1) == 'T') {
+								$result = mysql_query("SELECT teachername FROM teacher WHERE teachernum = '$check'");
+								$teachername = mysql_result($result,0,"teachername");
+								echo $teachername;
+								echo "老师";
+							}elseif (substr($check,0,1) == 'U') {
+								$result = mysql_query("SELECT studentname FROM student WHERE studentnum = '$check'");
+								$studentname = mysql_result($result,0,"studentname");
+								echo $studentname;
+								echo "同学";
+							}
+						}
+					?>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="mainContent">
+		<?php
+			$menujump = $_GET['menujump'];
+			echo "<div class=leftMenu>";
+			echo "<input type=hidden class=jump value=$menujump />";
+		?>
+			<div class="menuTitle">
+				<div class="bookImage"></div>
+				<span>用户中心</span>
+			</div>
+			<div class="menuNum" id="menuNo1">
+				<span>主页</span>
+			</div>
+			<div class="menuNum" id="menuNo2">
+				<span>我的学生</span>
+			</div>
+			<div class="menuNum" id="menuNo3">
+				<span>作业情况</span>
+			</div>
+			<div class="menuNum" id="menuNo4">
+				<span>账号</span>
+			</div>
+		</div>
+		<div class="rightContent">
+			<div class="usercenterIndex">
+				<div class="theTitle">
+					<span>个人信息</span>
+				</div>
+				<div class="userInform">
+					<?php
+						require('php/conn.php');
+						$teachernum = $_SESSION['account'];
+						$name = mysql_query("SELECT teachername FROM teacher WHERE teachernum = '$teachernum'",$conn);
+						$info = mysql_fetch_array($name,MYSQL_ASSOC);
+						echo "<span>账号：$teachernum</span>";
+						echo "<span>姓名：".$info['teachername']."</span>";
+					?>
+				</div>
+			</div>
+			<div class="studentState">
+				<div class="theTitle">
+					<span>学生&班级信息</span>
+					<input class="addClass" type="button" value="添加班级" />
+				</div>
+				<form action="php/addclass.php" method="post" onsubmit="return checkAddClass()">
+					<div class="addForm">
+						<span>班级名称：</span>
+						<input class="classInform classname" type="text" name="classname" value="" />
+						<span>课程名称：</span>
+						<input class="classInform classcategory" type="text" name="classcategory" value="" />
+						<input class="comfirmAdd" type="submit" value="确认添加" />
+					</div>
+				</form>
+				<div class="myClass">
+					<?php
+						require('php/conn.php');
+						$teachernum = $_SESSION['account'];
+						$result = mysql_query("SELECT * FROM testulink WHERE teacherid = '$teachernum' order by addtime desc");
+						$resultnum = mysql_num_rows($result);
+					
+						for ($i=1; $i <= $resultnum; $i++) { 
+								echo "<span >班级名称<<<$i     $resultnum</span>";
+							$info = mysql_fetch_array($result,MYSQL_ASSOC);
+							$studentclass = $info['stuclassname'];
+							$classInform = mysql_query("SELECT studentnum,studentname FROM student WHERE studentclass = '$studentclass' order by studentnum");
+							$studentcount = mysql_num_rows($classInform);
+							echo "<span id=class$i>班级名称：$studentclass</span>";
+							echo "<span id=course$i>课程名称：".$info['coursename']."</span>";
+							echo "<span id=num$i>班级人数：$studentcount 人</span>";
+							echo "<div class=studentDetails id=$i>";
+							for ($j=1; $j <= $studentcount; $j++) {
+								$info = mysql_fetch_array($classInform,MYSQL_ASSOC);
+								echo "<span>".$info['studentname']."&nbsp;".$info['studentnum']."</span>";
+							}
+							echo "</div>";
+						}
+					?>
+				</div>
+			</div>
+			<div class="homework">
+				<div class="theTitle">
+					<span>作业情况</span>
+					<input class="addHomework" type="button" value="添加作业" />
+				</div>
+				<table data-ng-if="pagename == 'homeworkList' ">
+					<tr>
+						<th>作业添加时间</th>
+						<th>作业班级</th>
+					</tr>
+					<tr data-ng-repeat="_v in yourHomeworkList" data-ng-click="homeworkDetails($index)">
+						<td>{{_v.time}}</td>
+						<td>{{_v.class}}</td>
+					</tr>
+				</table>
+				<table data-ng-if="pagename == 'homeworkDetails'">
+					<tr>
+						<th colspan="4">已提交作业学生列表</th>
+					</tr>
+					<tr>
+						<th>学号</th>
+						<th>作业文件</th>
+						<th>作业状态</th>
+						<th>得分</th>
+					</tr>
+					<tr data-ng-repeat="_v in homeworkDetails">
+						<td>{{_v.studentnum}}</td>
+						<td><a href="{{_v.homeworkfile}}">点此下载</a></td>
+						<td data-ng-click="giveScore(_v.state,_v)">{{_v.state}}</td>
+						<td>{{_v.grade}}</td>
+					</tr>
+				</table>
+				<div class="giveScoreBg">
+					<div class="theTitle">
+						<span>作业评分</span>
+					</div>
+					<input type="text" data-ng-model="score" placeholder="请填写作业评分(0-100)" />
+					<button data-ng-click="changeScore(score)">确定</button>
+				</div>
+				<div class="addMes">
+					<form action="php/uploadhomework.php" method="post" enctype="multipart/form-data">
+						<div class="theTitle">
+							<span>一、选择班级</span>
+						</div>
+						<?php
+							require('php/conn.php');
+							$teachernum = $_SESSION['account'];
+							$result = mysql_query("SELECT stuclassname,coursename FROM testulink WHERE teacherid = '$teachernum' order by coursename");
+							$resultnum = mysql_num_rows($result);
+							for ($i=1; $i <= $resultnum; $i++) {
+								$info = mysql_fetch_array($result,MYSQL_ASSOC);
+								echo "<label class=classYouChoose><input type=checkbox name=classyouchoose[] value=".$info['stuclassname']." />".$info['stuclassname']." ".$info['coursename']."</label>";
+							}
+						?>
+						<div class="theTitle title2">
+							<span>二、选择作业文件</span>
+						</div>
+						<input type="file" name="userfile" class="fileUpload" />
+						<input type="submit" class="comfirm" value="确认并提交" />
+					</form>
+				</div>
+			</div>
+			<div class="testRecord">
+				<div class="theTitle">
+					<span>账号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

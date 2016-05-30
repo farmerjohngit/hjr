@@ -1,0 +1,40 @@
+﻿<?php
+session_start();
+	$usernum = $_POST['usernum'];
+	$useranswer = $_POST['useranswer'];
+	$selectTable = null;
+	$selectField = null;
+	require('conn.php');
+	if (substr($usernum,0,1) == 'T') {
+		$selectTable='teacher';
+		$selectField='teachernum';
+		}else{
+		$selectTable='student';
+		$selectField='studentnum';
+		}
+		
+	$check_query = mysql_query("SELECT * FROM $selectTable WHERE $selectField = '$usernum' AND securityquestion = '$useranswer'");
+	 
+	if($check_query){
+		$result = mysql_fetch_array($check_query);
+	 if($result){
+	 		$temp=$result[$selectField];
+	 		$_SESSION['usernum'] = $temp;
+	 		$url = "../newpwd.php?menujump=2";
+			echo "<script language='javascript' type='text/javascript'>";
+			echo "window.location.href='$url'";
+			echo "</script>";
+	}else{
+			echo "<script language='javascript' type='text/javascript'>";
+			echo "history.back(-1);";
+			echo "alert('帐号或密保错误！');";
+			echo "</script>";
+			}
+		
+		 
+	} else{
+		mysql_error(); 
+		}
+ 
+
+?>

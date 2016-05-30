@@ -1,0 +1,141 @@
+header {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 37px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.mainContent {
+	position: absolute;
+	top: 50px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	width: 1000px;
+	height: 1000px;
+	border: 1px solid #EEEEEE;
+	border-radius: 3px;
+}
+.menu {
+	float: left;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	border-bottom: 1px solid #EEEEEE;
+}
+.menu span  {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	color: #444444;
+	font-size: 14px;
+	text-indent: 10px;
+}
+.selectTestCategory {
+	float: left;
+	margin-top: 15px;
+	width: 200px;
+}
+.selectTestnum {
+	float: left;
+	margin-top: 15px;
+	width: 50px;
+}
+.trueorfalsenum {
+	float: left;
+	margin-top: 15px;
+	width: 50px;
+}
+.submitTestCategory {
+	float: left;
+	margin-top: 15px;
+	margin-left: 40px;
+	width: 100px;
+	height: 21px;
+	line-height: 21px;
+	color: #FFFFFF;
+	background-color: #00A1DD;
+	padding: 0px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.displayOrHideMenu {
+	float: left;
+	width: 100%;
+	height: 50px;
+}
+.testTitle {
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+	height: 20px;
+}
+.selectTestBg {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 980px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+}
+.trueOrfalseTestBg {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 980px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+}
+.categoryAndSubclass {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 960px;
+	height: 50px;
+	line-height: 50px;
+}
+.testDetail {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 960px;
+	height: 90px;
+	clip: ();
+	line-height: 30px;
+	font-size: 14px;
+	font-family: "microsoft YaHei";
+}
+.answers {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 760px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.submitTest {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 763px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #00A1DD;
+	padding: 0px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.trueOrfalseTestBg label {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 40px;
+	line-height: 30px;
+	font-size: 14px;
+}

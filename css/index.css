@@ -1,0 +1,397 @@
+header {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 194px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.bg1 {
+	top: 149px;
+	height: 42px;
+	width: 100%;
+	line-height: 42px;
+	border-top: 1px solid #E7E7E7;
+	border-bottom: 1px solid #E7E7E7;
+}
+.category {
+	margin: 0px auto;
+	left: 0px;
+	right: 0px;
+	height: 42px;
+	width: 1000px;
+}
+.category > ul {
+	margin: 0px;
+	padding: 0px;
+}
+.category .otherLink {
+	list-style: none;
+	float: left;
+	line-height: 42px;
+	padding: 0px;
+	margin: 0px 12px 0px 0px;
+}
+.category .searchFor {
+	height: 42px;
+	width: 240px;
+	list-style: none;
+	float: right;
+	line-height: 42px;
+	padding: 0px;
+	margin: 0px;
+}
+.searchTxt {
+	float: left;
+	height: 42px;
+	width: 198px;
+	line-height: 42px;
+	font-size: 14px;
+	text-indent: 15px;
+	background-color: #FFFFFF;
+	border-top: 0px;
+	border-bottom: 0px;
+	border-left: 1px solid #E7E7E7;
+	border-right: 1px solid #E7E7E7;
+	border-radius: 2px;
+	padding: 0px;
+	outline: none;
+}
+.submitSearch {
+	float: right;
+	height: 42px;
+	width: 39px;
+	line-height: 42px;
+	cursor: pointer;
+	background-color: #F9F9F9;
+	border-radius: 19px;
+	padding: 0px;
+}
+.category a {
+	padding: 0px 5px;
+}
+.category .otherLink:hover {
+	text-shadow: 1px 1px 2px #666666;
+}
+.category a:link {color:#000000; text-decoration:none;}
+.category a:visited {color:#000000; text-decoration: none;}
+.category a:active {color:#000000;text-decoration:none;}
+.category a:hover {color:#000000;text-decoration:none;}
+.asideMenu0 {
+	position: fixed;
+	z-index: 1000;
+	top: 194px;
+	width: 30px;
+	height: 325px;
+	cursor: pointer;
+	background-color: #FAFAFA;
+}
+.asideMenu0 > ul {
+	margin: 0;
+	padding: 0px;
+}
+.asideMenu0 .asideMenu {
+	list-style: none;
+	padding: 0px;
+	height: 25px;
+	margin-bottom: 5px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 12px;
+}
+.asideMenu0 .asideMenu11 {
+	margin: 0px;
+}
+.asideMenu0 .backToTop {
+	background-color: #CCCCCC;
+}
+.asideMenu0 img {
+	width: 14px;
+	height: 8px;
+
+}
+.asideMenuOn {
+	color: #fff;
+	background-color: #00A1D6;
+}
+.asideMenuMouseOn {
+	color: #fff;
+	background-color: #AAAAAA;
+}
+.todayRecommend {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	top: 221px;
+	width: 1000px;
+	height: 259px;
+	border-bottom: 1px solid #E7E7E7;
+}
+.todayRecommend .newestClass {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width: 460px;
+	height: 220px;
+	background-color: #FFFFFF;
+}
+.todayRecommend .newestClass img {
+	width: 460px;
+	height: 220px;
+}
+.todayRecommend .classMostNum img {
+	height: 100px;
+	width: 160px;
+}
+.todayRecommend .clickMostClass {
+	position: absolute;
+	top: 20px;
+	left: 460px;
+	width: 540px;
+	height: 220px;
+}
+.todayRecommend .classMostNum {
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	height: 100px;
+	width: 160px;
+	background-color: #FFFFFF;
+}
+.top10 {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	width: 1000px;
+	height: 440px;
+}
+.top10 .titleHeader {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+}
+.top10 .titleHeader ul {
+	padding: 0px;
+	margin: 0px;
+}
+.top10 .titleHeader .bookImage {
+	width: 24px;
+	height: 20px;
+}
+.top10 .titleHeader .titleHeaderMenu {
+	list-style: none;
+	float: left;
+	padding: 0px 5px;
+	margin: 0px 1px 0px 0px;
+}
+.top10 .titleName {
+	font-family: "黑体";
+	font-size: 18px;
+	font-weight: bold;
+}
+.top10 .titleName a:link {color:#000000; text-decoration:none;}
+.top10 .titleName a:visited {color:#000000; text-decoration: none;}
+.top10 .titleName a:active {color:#000000; text-decoration:none;}
+.top10 .titleName a:hover {color:#00A1D7; text-decoration:none;}
+.top10 .titleHeaderMenu input {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	border: none;
+	border-radius: 3px;
+}
+.buttonBg {
+	background-color: #FFFFFF;
+}
+.menuFocus {
+	background-color: #00A1D6;
+	color: #FFFFFF;
+}
+.menuOn {
+	background-color: #EEEEEE;
+}
+.top10 .classTop10 {
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	height: 400px;
+}
+.top10 .classTop10Num {
+	float: left;
+	height: 150px;
+	width: 172px;
+	margin-right: 28px;
+	margin-bottom: 20px;
+}
+.top10 .imageDisplay {
+	top: 0px;
+	left: 0px;
+	width: 172px;
+	height: 100px;
+}
+.top10 .imageDisplay img {
+	width: 100%;
+	height: 100%;
+}
+.top10 .classIntroduction {
+	top: 110px;
+	left: 0px;
+	width: 172px;
+	height: 40px;
+	font-size: 14px;
+	color: #000000;
+	overflow: hidden;
+}
+.top10 .getMoreClass {
+	position: absolute;
+	top: 380px;
+	right: 28px;
+	width: 160px;
+	height: 25px;
+	line-height: 25px;
+}
+.top10 .getMoreClass input {
+	float: left;
+	width: 100%;
+	height: 25px;
+	font-family: "microsoft YaHei";
+	font-size: 10px;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	background-color: #EEEEEE;
+	cursor: pointer;
+}
+.fxTop10 {
+	top: 481px;
+}
+.glTop10 {
+	top: 921px;
+}
+.gxTop10 {
+	top: 1361px;
+}
+.jjTop10 {
+	top: 1801px;
+}
+.jyTop10 {
+	top: 2241px;
+}
+.lsTop10 {
+	top: 2681px;
+}
+.lxTop10 {
+	top: 3121px;
+}
+.wxTop10 {
+	top: 3561px;
+}
+.yxTop10 {
+	top: 4001px;
+}
+.zxTop10 {
+	top: 4441px;
+}
+.autherTop10 {
+	top: 4881px;
+}
+
+
+
+.ftwrapper {
+    margin: 0 auto;
+    line-height: 23px;
+    position: relative;
+    color: #ddd;
+}
+ 
+.m-yktFoot {
+	  width: 100%;
+    background: #474443;
+        
+}
+.f-cb{
+    zoom: 1;
+}
+.g-flow {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+.foot{
+		 
+	 padding-top:40px;
+	 padding-bottom:40px;
+	 		clear:both; 
+	    height: 100px;
+	    margin: 0px auto;
+	}
+.foot-top{
+		 margin:0 auto;
+	   width: 630px;
+ 
+ }
+    
+    
+.logo{
+
+		margin:0,auto;
+	  height: 46px;
+	  	margin-top:20px;
+    background: url(http://study.163.com/res/images/logoFoot.png?5a046e5a2ae52c701374abab8a4cdb3a) no-repeat;
+}
+
+.txt {
+		color:white;
+    line-height: 22px;
+    margin: 20px 0 30px;
+}
+.f-fs0 {
+    font-size: 12px;
+}
+ .copy {
+    color: #999;
+    font-size: 12px;
+    margin: 10px 0 0;
+}
+.foot-bottom {
+	 margin:0 auto;
+    width: 440px;
+    padding: 33px 0 30px;
+    font-size: 12px;
+    
+}
+.foot-bottom a{
+	color:white}
+ 
+.tit {
+    margin: 4px 0 0;
+}
+.f-fl {
+    float: left;
+}
+ .mobile {
+    width: 296px;
+    margin: 15px 0 0;
+}
+
+.mlogo1 {
+    display: block;
+    float: left;
+    width: 111px;
+    height: 32px;
+    background: url(http://study.163.com/res/images/ui/download_icon.png?f021041618b75368519054989688a67e) no-repeat 0 0;
+}
+ .mlogo2 {
+ 	background-attachment:fixed;
+ 	  background-position: -42px -42px;
+    display: block;
+    float: left;
+    width: 111px;
+    height: 32px;
+    background: url(http://study.163.com/res/images/ui/download_icon.png?f021041618b75368519054989688a67e) no-repeat 0 0;
+}

@@ -1,0 +1,120 @@
+header {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 37px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.theTitle {
+	position: absolute;
+	top: 80px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	width: 1000px;
+	height: 40px;
+}
+.theTitle span {
+	line-height: 40px;
+	font-size: 13px;
+	color: #999999;
+}
+.userInform {
+	position: absolute;
+	top: 120px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	width: 1000px;
+	border: 1px solid #00A1D0;
+	border-radius: 3px;
+}
+.message {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 60px;
+	width: 980px;
+}
+.topic {
+	float: left;
+	margin-left: 100px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	font-weight: bold;
+}.theNote {
+	float: left;
+	margin-left: 230px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 15px;
+}
+.myQuestion {
+	float: left;
+	margin-left: 10px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 15px;
+}
+.usernumInput {
+	float: left;
+	margin-top: 14px;
+	margin-left: 10px;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 5px;
+	padding: 0px;
+	border: 1px solid #00A1D0;
+	border-radius: 2px;
+}.useranswerInput {
+	float: left;
+	margin-top: 14px;
+	margin-left: 10px;
+	width: 250px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 5px;
+	padding: 0px;
+	border: 1px solid #00A1D0;
+	border-radius: 2px;
+}
+.theWarning {
+	float: left;
+	margin-left: 50px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 15px;
+	color: #DD0000;
+	display: none;
+}
+.nextStep {
+	float: left;
+	margin-top: 15px;
+	margin-left: 412px;
+	width: 200px;
+	height: 30px;
+	padding: 0px;
+	border: none;
+	border-radius: 3px;
+	background-color: #00A1D0;
+	font-size: 15px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

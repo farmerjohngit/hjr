@@ -1,0 +1,193 @@
+header {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 37px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.mainContent {
+	position: absolute;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	top: 37px;
+	width: 1000px;
+	height: 1000px;
+}
+.classTopicEtc {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 70px;
+	border-bottom:1px solid #E8E8E8;
+}
+.classTopic {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 800px;
+	height: 20px;
+	line-height: 20px;
+	color: #999999;
+	font-size: 12px;
+	font-family: "宋体";
+}
+.classTopic2 {
+	float: left;
+	margin-top: 0px;
+	margin-left: 10px;
+	width: 800px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+.classTopicEtc .notebook {
+	float: right;
+	margin-top:0px;
+	margin-right: 0px;
+	width: 68px;
+	height: 70px;
+	background-image: url(../image/class/notebook.png);
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: 22px 10px;
+	background-color: #FAFAFA;
+	border-left:1px solid #E8E8E8;
+	border-right:1px solid #E8E8E8;
+}
+.classTopicEtc .collectClass {
+	float: right;
+	margin-top:0px;
+	margin-right: 0px;
+	width: 68px;
+	height: 70px;
+	background-image: url(../image/class/collect.png);
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: 22px 10px;
+	background-color: #FAFAFA;
+	border-right:1px solid #E8E8E8;
+}
+.note {
+	float: left;
+	margin-top: 40px;
+	width: 100%;
+	height: 20px;
+	color: #999999;
+	font-size: 12px;
+	text-align: center;
+}
+.mainContent .classVideoAndNote {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 500px;
+	background-color: #000000;
+}
+.classVideoAndNote .classVideo {
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+	width: 800px;
+	height: 480px;
+}
+.mainContent .theComments {
+	position: relative;
+	top: 50px;
+	width: 100%;
+}
+.commentTitle {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.commentsInput {
+	position: relative;
+	top: 20px;
+	width: 100%;
+	height: 200px;
+}
+.warning {
+	float: right;
+	height: 20px;
+	color: #999999;
+	font-size: 12px;
+}
+.yourComments {
+	float: right;
+	width: 850px;
+	height: 80px;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: #999999;
+}
+.commentsInput input {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	float: right;
+	margin-top: 5px;
+	width: 150px;
+	height: 30px;
+	padding: 0px;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: 0px;
+	border-radius: 3px;
+	background-color: #00A1D0;
+}
+.classComments {
+	position: relative;
+	top: 20px;
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.classComments img {
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+	width: 50px;
+	height: 50px;
+}
+.classComments .floor {
+	float: left;
+	margin-top: 10px;
+	margin-left: 25px;
+	width: 50px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 12px;
+	color: #999999;
+}
+.classComments .userName {
+	float: left;
+	margin-top: 10px;
+	width: 800px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 12px;
+	color: #00A1D0;
+}
+.classComments .commentContent {
+	float: left;
+	margin-left: 25px;
+	width: 900px;
+	height: 50px;
+	line-height: 25px;
+	font-size: 15px;
+	overflow: hidden;
+}
+.classComments .commentTime {
+	float: right; 
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+}

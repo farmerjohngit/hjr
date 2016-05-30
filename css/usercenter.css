@@ -1,0 +1,363 @@
+header {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 37px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.mainContent {
+	position: absolute;
+	top: 100px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	width: 1000px;
+	height: 1000px;
+}
+.mainContent .leftMenu {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 158px;
+	border-radius: 3px;
+	border: 1px solid #E7E7E7;
+}
+.mainContent .leftMenu .menuTitle {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #E7E7E7;
+}
+.menuTitle .bookImage {
+	float: left;
+	margin-top: 7px;
+	margin-left: 5px;
+	width: 20px;
+	height: 16px;
+	background-image: url(../image/common/book.png);
+	background-size: 20px 16px;
+}
+.menuTitle span {
+	margin-left: 10px;
+	font-size: 14px;
+}
+.leftMenu .menuNum {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	text-indent: 35px;
+	cursor: pointer;
+}
+.leftMenuFocus {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #2BA9CE;
+}
+.mainContent .rightContent {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 830px;
+	height: 100%;
+	border-radius: 3px;
+	border: 1px solid #E7E7E7;
+}
+.usercenterIndex {
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+.theTitle {
+	float: left;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	text-indent: 21px;
+	border-bottom: 1px solid #E7E7E7;
+}
+.userInform {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #E7E7E7;
+}
+.userInform span {
+	float: left;
+	margin-top: 10px;
+	margin-left: 21px;
+	width: 800px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.collection {
+	float: left;
+	width: 100%;
+	height: 100%;
+	display:none;
+}
+.classCollection {
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 790px;
+	height: 90px;
+	border: 1px solid #E7E7E7;
+	border-radius: 3px;
+}
+.noCollection {
+	float: left;
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+}
+.classCollection img {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 80px;
+	height: 60px;
+}
+.classCollection .classInform {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	height: 20px;
+	line-height: 20px;
+	color: #2BA9CE;
+}
+.classCollection .collectTime {
+	float: left;
+	margin-left: 18px;
+	width: 500px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 12px;
+}
+.deletecollection {
+	float: right;
+	margin-top: 10px;
+	margin-right: 50px;
+	width: 10px;
+	height: 10px;
+	padding: 0px;
+	border: none;
+}
+.homeworkAndTeacher {
+	float: left;
+	width: 100%;
+	height: 100%;
+	display:none;
+}
+.addHomeworkBg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 1050;
+	display: none;
+}
+.addHomeworkBg .addMes {
+	position: absolute;
+	width: 500px;
+	height: 200px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+.theTitle {
+	float: left;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	text-indent: 21px;
+	border-bottom: 1px solid #E7E7E7;
+}
+.theTitle .close {
+	float: right;
+	height: 30px;
+	width: 30px;
+	background-color: #fff;
+	border: none;
+	padding: 0;
+	font-size: 14px;
+}
+.fileUpload {
+	float: left;
+	margin-top: 30px;
+	margin-left: 50px;
+	width: 400px;
+	height: 30px;
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+.comfirm {
+	float: left;
+	margin-left: 300px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	color: #FFFFFF;
+	background-color: #00A1D0;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.homeworkDetailBg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 1050;
+	display: none;
+}
+.homeworkDetailBg .homeworkDetail {
+	position: absolute;
+	width: 500px;
+	height: 242px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+.homeworkDetail .details {
+	float: left;
+	margin-left: 40px;
+	width: 420px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+}
+.myTeacherAndHomework {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 810px;
+	min-height: 60px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+}
+.myTeacherAndHomework > span {
+	float: left;
+	margin-left: 10px;
+	margin-top:10px;
+	width: 190px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+.fontclass {
+	color: #005BD4;
+	font-weight: bold;
+}
+.totalHomework {
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+	border-top: 1px solid #CCCCCC;
+	display: none;
+}
+.homeworkList {
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	border-radius: 0 0 3px 3px;
+}
+.homeworkList th {
+	border-bottom: 1px solid #CCCCCC;
+}
+.homeworkList th,.homeworkList td {
+	height: 40px;
+	text-align: center;
+	font-weight: normal;
+	font-size: 14px;
+}
+.homeworkList a {
+	color: #ff9641;
+	text-decoration: none;
+}
+.homeworkList .redFont {
+	color: red;
+	cursor: pointer;
+}
+.homeworkList .greenFont {
+	color: green;
+}
+.class1 {
+	border-right: 2px solid #CCCCCC;
+}
+.testRecord {
+	float: left;
+	width: 100%;
+	height: 100%;
+	display:none;
+}
+.recordBg {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 810px;
+	height: 105px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+}
+.testTime {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	width: 700px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.testCaregory {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	height: 20px;
+	width: 700px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.viewMore {
+	float: right;
+	margin-top: 0px;
+	margin-right: 50px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.count {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	width: 500px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.accountSetting {
+	float: left;
+	width: 100%;
+	height: 100%;
+	display:none;
+}

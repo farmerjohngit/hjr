@@ -1,0 +1,305 @@
+.addBg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+}
+.addBg .main {
+    position: absolute;
+    border-radius: 4px;
+    width: 700px;
+    height: 400px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+.main .addTitle {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #eee;
+}
+.main .addTitle span {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 40px;
+}
+.main .addTitle button {
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    font-size: 30px;
+    border: none;
+    background-color: #eee;
+}
+.main .addDetail {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 320px;
+}
+.addDetail textarea {
+    margin-left: 40px;
+    margin-top: 30px;
+    width: 600px;
+    height: 104px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    text-indent: 10px;
+}
+.main .addMenu {
+    position: absolute;
+    bottom: 10px;
+    height: 49px;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+.addMenu button {
+    float: right;
+    height: 40px;
+    width: 100px;
+    margin-top: 7px;
+    border: none;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #00A1D0;
+    padding: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.mainContent {
+    position: absolute;
+    top: 120px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 1000px;
+}
+.searchAndAdd {
+    position: relative;
+    top: 0px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+    width: 1000px;
+    height: 70px;
+}
+.searchContent {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    width: 600px;
+    height: 38px;
+    border: 1px solid #CCCCCC;
+    border-right: 0px;
+}
+.searchContent input {
+    float: left;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    text-indent: 10px;
+    padding: 0px;
+    border: none;
+}
+.searchForButton {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    width: 100px;
+    height: 40px;
+}
+.searchForButton button {
+    float: left;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #00A1D0;
+    padding: 0px;
+    border: none;
+}
+.addButton {
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    width: 100px;
+    height: 40px;
+}
+.addButton button {
+    float: left;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #00A1D0;
+    padding: 0px;
+    border: none;
+}
+.thePostList {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.thePostList tr th {
+    border-bottom: 2px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #555;
+}
+.thePostList tr td {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.postDetail .postTitle {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #eee;
+}
+.postDetail .postTitle span {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.postDetail .postTitle a {
+    float: right;
+    margin-right: 10px;
+    line-height: 40px;
+}
+.postDetail .comments {
+    float: left;
+    width: 998px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+}
+.postDetail .comments .commentTitle {
+    float: left;
+    height: 29px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.postDetail .comments .commentTitle span {
+    margin-left: 10px;
+    line-height: 29px;
+}
+.postDetail .comments >.content {
+    float: left;
+    margin-top: 20px;
+    margin-left: 49px;
+    width: 900px;
+    min-height: 150px;
+    font-size: 14px;
+}
+.postDetail .comments .response {
+    float: left;
+    width: 100%;
+    line-height: 29px;
+    border-top: 1px solid #ccc;
+}
+.postDetail .comments .response a {
+    float: right;
+    margin-top: 0px;
+    margin-right: 49px;
+}
+.postDetail .comments .response .atComments {
+    float: left;
+    margin-top: 0px;
+    margin-left: 49px;
+}
+.postDetail .comments .response .atComments textarea {
+    width: 900px;
+    height: 80px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    text-indent: 10px;
+}
+.postDetail .comments .response .atComments button {
+    float: right;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 25px;
+    width: 75px;
+    border: none;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    background-color: #00A1D0;
+    border-radius: 2px;
+}
+.postDetail .comments .sunComments {
+    float: right;
+    margin-right: 49px;
+    width: 900px;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 3px;
+}
+.postDetail .comments .sunComments .content {
+    float: left;
+    margin-top: 10px;
+    margin-left: 49px;
+    width: 800px;
+    font-size: 13px;
+}
+.postDetail .yourResponse {
+    float: left;
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+}
+.postDetail .yourResponse textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    text-indent: 10px;
+}
+.postDetail .yourResponse button {
+    float: right;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 90px;
+    border: none;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    background-color: #00A1D0;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+

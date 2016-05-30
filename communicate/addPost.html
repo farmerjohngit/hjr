@@ -1,0 +1,16 @@
+<div class="addBg" data-ng-show="showAddPost">
+    <div class="main">
+        <div class="addTitle">
+            <span>新建交流帖：</span>
+            <button data-ng-click="addPostView()">X</button>
+        </div>
+        <div class="addDetail">
+            <textarea data-ng-model="postCategory" required placeholder="请在此处输入需要新建帖子所属的贴吧"></textarea>
+            <textarea data-ng-model="postName" required placeholder="请在此处输入需要新建帖子的标题"></textarea>
+        </div>
+        <div class="addMenu">
+            <button data-ng-click="addPostView()">取消</button>
+            <button data-ng-disabled="invalid" data-ng-click="addPost(postCategory,postName)">确定</button>
+        </div>
+    </div>
+</div>

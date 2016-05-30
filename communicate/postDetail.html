@@ -1,0 +1,35 @@
+<div class="postDetail">
+    <div class="postTitle">
+        <span>{{postTitle}}</span>
+        <a href="javascript:;" data-ng-click="toPostIndex()">返回</a>
+    </div>
+    <div class="comments" data-ng-repeat="_v in commentList">
+        <div class="commentTitle">
+            <span>{{_v.studentname}} 发表于 : {{_v.timetrans}}</span>
+        </div>
+        <div class="content">
+            <span>{{_v.content}}</span>
+        </div>
+        <div class="response">
+            <a href="javascript:;" data-ng-click="editResponse($index)">回复</a>
+            <div data-ng-if="rowSelect == $index" class="atComments">
+                <textarea data-ng-model="atCommentContent"></textarea>
+                <button data-ng-click="response($index,atCommentContent)">提交评论</button>
+            </div>
+        </div>
+        <div data-ng-repeat="_vv in atCommentList" class="sunComments" data-ng-if="_vv.atinfor == _v.time + _v.usernum">
+            <div>
+                <div class="commentTitle">
+                    <span>{{_vv.studentname}} 发表于 : {{_vv.timetrans}}</span>
+                </div>
+                <div class="content">
+                    <span>@{{_v.studentname}}:{{_vv.content}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yourResponse">
+        <textarea data-ng-model="commentContent" placeholder="在此处输入你的评论 *^_^* " class="commentTextarea"></textarea>
+        <button data-ng-click="response('-1',commentContent)">提交评论</button>
+    </div>
+</div>

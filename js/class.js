@@ -1,0 +1,90 @@
+var myAppController = angular.module("myApp",[]);
+myAppController.controller('class', function($scope,$http) {
+	function reload(commentsListPath) {
+		 
+		$http.get(commentsListPath).success(function(data) {
+			data.sort(function (a,b){
+				return b.commenttime-a.commenttime;
+				});
+			$scope.commentList = data;
+		 
+			for (var i = 0;i < data.length;i++) {
+				data[i].timetrans = data[i].commenttime.substr(0,4) +"年"+ data[i].commenttime.substr(4,2) +"月"+ data[i].commenttime.substr(6,2) +"日 " + data[i].commenttime.substr(8,2) +":" + data[i].commenttime.substr(10,2) +":" + data[i].commenttime.substr(12,2);
+			}
+			$scope.commentList.leng = data.length;
+		})
+	}
+	(function() {
+		var commentsListPath = "interface/class/getCommentsList.php?classid=" + $(".classid").val();
+		reload(commentsListPath);
+	}
+	)();
+	$scope.submitComment = function() {
+		var submitCommentPath = "interface/class/submitComment.php?classid=" + $(".classid").val() + "&usernum=" + $(".usernum").val() + "&content=" + $(".yourComments").val();
+		 
+		if ($(".usernum").val().length == 9) {
+			if ($(".yourComments").val()) {
+				$http.get(submitCommentPath).success(function(data) {
+					var commentsListPath = "interface/class/getCommentsList.php?classid=" + $(".classid").val();
+					reload(commentsListPath);
+					$(".yourComments").val("");
+				})
+			}else {
+				alert("亲，不能发表空评论哟！");
+			}
+		}else {
+			alert("亲，请先登录再发表评论哟！");
+		}
+	}
+});
+$(document).ready(function() {
+	$(".yourComments").val('');
+	$(".collectClass").mouseover(function() {
+		$(this).css("background-color","#FFFFFF");
+		$(".collectClass > a > span").css("color","#04924B");
+	});
+	$(".collectClass").mouseout(function() {
+		$(this).css("background-color","#FAFAFA");
+		$(".collectClass > a > span").css("color","#999999");
+	});
+	$(".notebook").mouseover(function() {
+		$(this).css("background-color","#FFFFFF");
+		$(".notebook > span").css("color","#04924B");
+	});
+	$(".notebook").mouseout(function() {
+		$(this).css("background-color","#FAFAFA");
+		$(".notebook > span").css("color","#999999");
+	});
+});
+function adddate() {
+	var thedate = new Date();
+	var year = thedate.getYear();
+		year = year + 1990;
+	var month = thedate.getMonth()+1;
+	if (month <= 9) {
+		month = month.toString();
+		month = 0 + month;
+	};
+	var day = thedate.getDate();
+	if (day <= 9) {
+		day = day.toString();
+		day = 0 + day;
+	};
+	var hour = thedate.getHours();
+	if (hour <= 9) {
+		hour = hour.toString();
+		hour = 0 + hour;
+	};
+	var minute = thedate.getMinutes();
+	if (minute <= 9) {
+		minute = minute.toString();
+		minute = 0 + minute;
+	};
+	var second = thedate.getSeconds();
+	if (second <= 9) {
+		second = second.toString();
+		second = 0 + second;
+	};
+	var datenow = year + month + day + hour + minute + second;
+	$(".thetime").val(datenow);
+};

@@ -1,0 +1,67 @@
+<?php
+	session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head  lang="zh-CN">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="css/signup.css" />
+	<link type="text/css" rel="stylesheet" href="css/common.css" />
+	<title>个人中心</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/signup.js"></script>
+</head>
+<body>
+	<header><!--公用首部-->
+		<div class="bg0">
+			<nav class="topInfor">
+				<ul class="outsideLink">
+					<li><a href="index.php">网站首页</a></li>
+					<li><a href="http://jwc.csuft.edu.cn/" target="_blank">教务处系统</a></li>
+					<li><a href="http://www.csuft.edu.cn/" target="_blank">中南林业科技大学</a></li>
+				</ul>
+				<ul class="userLink">
+					<li><a href=""><span class="download">下载客户端</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="theTitle">
+		<span>请按照以下步骤找回您的密码：</span>
+	</div>
+	<div class="userInform">
+		<div class="message">
+			<span class="topic">第一步：输入账号</span>
+		</div>
+		
+		<!-------------------------------------------------------------------------------------------------丢了 a.php   数据库补充字段 -------------------------------------------------------------------------------------------------->	
+		<form action="php/reppwd.php" method="post" onsubmit="return check()">
+			<div class="message">
+				<span class="theNote">请输入您的学号/教工号：</span>
+				<input type="text" class="usernumInput" name="usernum" />
+				<span id="warn1" class="theWarning">× 此处不能为空！</span>
+			</div>
+		 
+		 
+		
+		<!-------------------------------------------------------------------------------------------------丢了 a.php   数据库补充字段 -------------------------------------------------------------------------------------------------->	
+		<div class="message">
+			<span class="topic">第二步：填写密保问题</span>
+		</div>
+	 
+			<div class="message">
+				<span class="theNote">您的密保问题是：</span>
+				<span class="myQuestion">我的生日是？</span>
+			</div>
+			<div class="message">
+				<span class="theNote">请输入您的答案：</span>
+				<input type="text" class="useranswerInput" name="useranswer" />
+				<span id="warn2" class="theWarning">× 此处不能为空！</span>
+			</div>
+			<div class="message">
+				<input type="submit" class="nextStep" value="下一步" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>
